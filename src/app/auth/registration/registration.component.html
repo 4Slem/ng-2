@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+         <div class="form-wrapper">
+              <h3 class="text-center">Registration</h3>
+             <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label for="regEmail">Email</label>
+                      <input 
+                        formControlName="email"
+                        [ngClass]="{'is-invalid': form.get('email').invalid && form.get('email').touched, 'is-valid': form.get('email').valid && form.get('email').touched}"
+                        type="email" class="form-control" id="regEmail" placeholder="Enter email">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="regName">First name</label>
+                      <input 
+                        [ngClass]="{'is-invalid': form.get('firstName').invalid && form.get('firstName').touched, 'is-valid': form.get('firstName').valid && form.get('firstName').touched}"
+                        formControlName="firstName"
+                        type="text" class="form-control" id="regName" placeholder="Enter name">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="regSurName">Last name</label>
+                      <input 
+                        formControlName="lastName"
+                        [ngClass]="{'is-invalid': form.get('lastName').invalid && form.get('lastName').touched, 'is-valid': form.get('lastName').valid && form.get('lastName').touched}"
+                        type="text" class="form-control" id="regSurName" placeholder="Enter surname">
+                  </div>
+
+                  <div class="form-group">
+                      <label for="regGroup">Group</label>
+                      <select 
+                      [ngClass]="{'is-invalid': form.get('group').invalid && form.get('group').touched, 'is-valid': form.get('group').valid && form.get('group').touched}"
+                        formControlName="group" class="form-control" id="regGroup">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                      </select>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="regPassword">Password</label>
+                      <input
+                        formControlName="password" 
+                        [ngClass]="{'is-invalid': form.get('password').invalid && form.get('password').touched, 'is-valid': form.get('password').valid && form.get('password').touched}"
+                        type="password" class="form-control" id="regPassword" placeholder="Enter password">
+                  </div>
+
+                  <label class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                      <input 
+                        [ngClass]="{'is-invalid': form.get('agree').invalid && form.get('agree').touched, 'is-valid': form.get('agree').valid && form.get('agree').touched}"
+                        formControlName="agree" type="checkbox" class="custom-control-input">
+                      <span class="custom-control-indicator"></span>
+                      <span class="custom-control-description">I accept the agreement</span>
+                  </label>
+
+                  <div class="col-auto form-btn">
+                      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Registration</button>
+                      <a routerLink="/login" class="btn btn-danger">Login</a>
+                  </div>
+             </form>
+         </div>
+      </div>
+      <div class="col-md-4"></div>
+  </div> 
+</div>

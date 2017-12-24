@@ -1,0 +1,55 @@
+.form-wrapper {
+    margin-top: 100px;
+    margin-bottom: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px #495057;
+    padding: 40px;
+}
+
+.form-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form-wrapper h3 {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+.friend-search {
+    margin-top: 40px;
+}
+.main {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.users, .friends {
+    margin-top: 40px;
+}
+
+.friends .card-img {
+    height: 150px;
+}
+
+.card-img {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img-top {
+    min-height: 200px;
+    background: #999;
+    width: 100%;
+    height: auto;
+}
+
+.card-deck {
+    margin-bottom: 30px;
+}
